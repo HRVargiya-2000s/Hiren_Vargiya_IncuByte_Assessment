@@ -1,7 +1,9 @@
 import { describe, test, expect } from "vitest";
 import request from "supertest";
 import jwt from "jsonwebtoken";
+import bcrypt from "bcrypt";
 import app from "../../app.js";
+import { createUser } from "../../services/auth.service.js";
 
 describe("User Login", () => {
   test("should login successfully", async () => {
@@ -25,14 +27,14 @@ describe("User Login", () => {
   });
 
   test("should include user role in JWT", async () => {
-    await request(app)
-      .post("/api/auth/register")
-      .send({
-        name: "Admin User",
-        email: "admin@example.com",
-        password: "Password123",
-        role: "admin",
-      });
+    const hashedPassword = await bcrypt.hash("Password123", 10);
+
+    await createUser(
+      "Admin User",
+      "admin@example.com",
+      hashedPassword,
+      "admin"
+    );
 
     const response = await request(app)
       .post("/api/auth/login")

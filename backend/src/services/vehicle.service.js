@@ -1,11 +1,15 @@
 import pool from "../config/db.js";
 
+/* ===========================
+   CREATE
+=========================== */
+
 export async function createVehicle(vehicle) {
   const { make, model, category, price, quantity } = vehicle;
 
   const result = await pool.query(
     `INSERT INTO vehicles
-     (make, model, category, price, quantity)
+      (make, model, category, price, quantity)
      VALUES ($1, $2, $3, $4, $5)
      RETURNING *`,
     [make, model, category, price, quantity]
@@ -14,13 +18,23 @@ export async function createVehicle(vehicle) {
   return result.rows[0];
 }
 
+/* ===========================
+   GET ALL
+=========================== */
+
 export async function getAllVehicles() {
   const result = await pool.query(
-    "SELECT * FROM vehicles ORDER BY id"
+    `SELECT *
+     FROM vehicles
+     ORDER BY id`
   );
 
   return result.rows;
 }
+
+/* ===========================
+   SEARCH
+=========================== */
 
 export async function searchVehicles(searchTerm) {
   const result = await pool.query(
@@ -36,61 +50,110 @@ export async function searchVehicles(searchTerm) {
   return result.rows;
 }
 
+/* ===========================
+   FIND BY ID
+=========================== */
+
 export async function findVehicleById(id) {
   const result = await pool.query(
-    "SELECT * FROM vehicles WHERE id=$1",
+    `SELECT *
+     FROM vehicles
+     WHERE id = $1`,
     [id]
   );
 
   return result.rows[0];
 }
 
+/* ===========================
+   UPDATE
+=========================== */
+
 export async function updateVehicle(id, vehicle) {
-  const { make, model, category, price, quantity } = vehicle;
+  const {
+    make,
+    model,
+    category,
+    price,
+    quantity,
+  } = vehicle;
 
   const result = await pool.query(
-    `UPDATE vehicles
-     SET make=$1,
-         model=$2,
-         category=$3,
-         price=$4,
-         quantity=$5
-     WHERE id=$6
-     RETURNING *`,
-    [make, model, category, price, quantity, id]
+    `
+    UPDATE vehicles
+    SET
+      make = $1,
+      model = $2,
+      category = $3,
+      price = $4,
+      quantity = $5
+    WHERE id = $6
+    RETURNING *
+    `,
+    [
+      make,
+      model,
+      category,
+      price,
+      quantity,
+      id,
+    ]
   );
 
   return result.rows[0];
 }
+
+/* ===========================
+   DELETE
+=========================== */
 
 export async function deleteVehicle(id) {
   const result = await pool.query(
-    "DELETE FROM vehicles WHERE id=$1 RETURNING *",
+    `
+    DELETE FROM vehicles
+    WHERE id = $1
+    RETURNING *
+    `,
     [id]
   );
 
   return result.rows[0];
 }
+
+/* ===========================
+   PURCHASE
+=========================== */
 
 export async function purchaseVehicle(id) {
   const result = await pool.query(
-    `UPDATE vehicles
-     SET quantity = quantity - 1
-     WHERE id=$1
-       AND quantity > 0
-     RETURNING *`,
+    `
+    UPDATE vehicles
+    SET quantity = quantity - 1
+    WHERE id = $1
+      AND quantity > 0
+    RETURNING *
+    `,
     [id]
   );
 
   return result.rows[0];
 }
 
-export async function restockVehicle(id, quantity) {
+/* ===========================
+   RESTOCK
+=========================== */
+
+export async function restockVehicle(
+  id,
+  quantity
+) {
   const result = await pool.query(
-    `UPDATE vehicles
-     SET quantity = quantity + $1
-     WHERE id=$2
-     RETURNING *`,
+    `
+    UPDATE vehicles
+    SET quantity = quantity + $1
+    WHERE id = $2
+    RETURNING *
+    `,
     [quantity, id]
   );
 

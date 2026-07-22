@@ -1,15 +1,29 @@
 import { describe, expect, test } from "vitest";
 import request from "supertest";
+import bcrypt from "bcrypt";
 import app from "../../app.js";
+import { createUser } from "../../services/auth.service.js";
 
-async function getAuthToken() {
+async function getAuthToken(role = "user") {
   const user = {
     name: "Hiren",
-    email: "hiren@example.com",
+    email: `${role}@example.com`,
     password: "Password123",
+    role,
   };
 
-  await request(app).post("/api/auth/register").send(user);
+  if (role === "admin") {
+    const hashedPassword = await bcrypt.hash(user.password, 10);
+
+    await createUser(
+      user.name,
+      user.email,
+      hashedPassword,
+      role
+    );
+  } else {
+    await request(app).post("/api/auth/register").send(user);
+  }
 
   const login = await request(app).post("/api/auth/login").send({
     email: user.email,
@@ -86,7 +100,7 @@ describe("Vehicle API", () => {
   });
 
   test("should delete a vehicle", async () => {
-    const token = await getAuthToken();
+    const token = await getAuthToken("admin");
     const vehicle = await createVehicle(token);
 
     const response = await request(app)
@@ -129,7 +143,7 @@ describe("Vehicle API", () => {
   });
 
   test("should increase quantity when restocking a vehicle", async () => {
-    const token = await getAuthToken();
+    const token = await getAuthToken("admin");
     const vehicle = await createVehicle(token, { quantity: 2 });
 
     const response = await request(app)

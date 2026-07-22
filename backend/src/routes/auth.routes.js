@@ -9,20 +9,20 @@ import {
 
 const router = Router();
 
-// ================= REGISTER =================
+/* ===========================
+   REGISTER
+=========================== */
 
 router.post("/register", async (req, res) => {
   try {
-    const { name, email, password, role } = req.body;
+    const { name, email, password } = req.body;
 
-    // Required fields validation
     if (!name || !email || !password) {
       return res.status(400).json({
         message: "All fields are required",
       });
     }
 
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailRegex.test(email)) {
@@ -31,7 +31,6 @@ router.post("/register", async (req, res) => {
       });
     }
 
-    // Check existing user
     const existingUser = await findUserByEmail(email);
 
     if (existingUser) {
@@ -40,15 +39,13 @@ router.post("/register", async (req, res) => {
       });
     }
 
-    // Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Save user
     await createUser(
       name,
       email,
       hashedPassword,
-      role
+      "user"
     );
 
     return res.status(201).json({
@@ -63,13 +60,20 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// ================= LOGIN =================
+/* ===========================
+   LOGIN
+=========================== */
 
 router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    // Check if user exists
+    if (!email || !password) {
+      return res.status(400).json({
+        message: "Email and password are required",
+      });
+    }
+
     const user = await findUserByEmail(email);
 
     if (!user) {
@@ -78,7 +82,6 @@ router.post("/login", async (req, res) => {
       });
     }
 
-    // Verify password
     const isMatch = await bcrypt.compare(
       password,
       user.password
@@ -90,7 +93,6 @@ router.post("/login", async (req, res) => {
       });
     }
 
-    // Generate JWT
     const token = jwt.sign(
       {
         id: user.id,
@@ -104,7 +106,14 @@ router.post("/login", async (req, res) => {
     );
 
     return res.status(200).json({
+      message: "Login successful",
       token,
+      user: {
+        id: user.id,
+        name: user.name,
+        email: user.email,
+        role: user.role,
+      },
     });
   } catch (error) {
     console.error(error);

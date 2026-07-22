@@ -17,7 +17,7 @@ describe("User Registration", () => {
     expect(response.body).toHaveProperty("message");
   });
 
-  test("should register a user with role", async () => {
+  test("should ignore role and register public users with user role", async () => {
     const response = await request(app)
       .post("/api/auth/register")
       .send({
@@ -30,7 +30,10 @@ describe("User Registration", () => {
     const user = await findUserByEmail("admin@example.com");
 
     expect(response.status).toBe(201);
-    expect(user.role).toBe("admin");
+    expect(response.body).toEqual({
+      message: "User registered successfully",
+    });
+    expect(user.role).toBe("user");
   });
 
   test("should return 400 when required fields are missing", async () => {
