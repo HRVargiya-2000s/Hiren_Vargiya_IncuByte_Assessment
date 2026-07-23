@@ -27,3 +27,11 @@ describe("Login Page", () => {
     ).toBeInTheDocument();
   });
 });
+
+it("renders Login button", () => {
+  render(<Login />);
+
+  expect(
+    screen.getByRole("button", { name: /login/i })
+  ).toBeInTheDocument();
+});
