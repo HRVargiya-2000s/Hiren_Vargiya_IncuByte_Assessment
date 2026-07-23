@@ -1,10 +1,36 @@
 # Car Dealership Inventory System
 
-[![Continuous Integration](https://github.com/HRVargiya-2000s/Hiren_Vargiya_IncuByte_Assessment/actions/workflows/ci.yml/badge.svg)](https://github.com/HRVargiya-2000s/Hiren_Vargiya_IncuByte_Assessment)
+[![Node.js](https://img.shields.io/badge/Node.js-20.x-70B519)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/React-19.2.0-0088cc)](https://react.dev/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14%2B-70B519)](https://www.postgresql.org/)
+[![License](https://img.shields.io/badge/License-MIT-eab308)](#license)
+
+[Features](#project-scope) • [Tech Stack](#technology-stack) • [Installation](#installation--running-the-application) • [Usage](#quick-start) • [Architecture](#system-architecture) • [Screenshots](#screenshots)
 
 A full-stack React and Node.js/Express application for browsing dealership inventory, purchasing luxury performance vehicles, interactive 3D holograph previewing, and managing inventory stock. The core assessment features are extended with interactive 3D configurators, custom Tailwind luxury design systems, toast notification alerts, and comprehensive automated test coverage.
 
 ![Car Dealership Hero Section](docs/screenshots/hero-section.png)
+
+---
+
+## 📋 Table of Contents
+
+- [Overview](#car-dealership-inventory-system)
+- [Features](#project-scope)
+- [Tech Stack](#technology-stack)
+- [Project Architecture](#system-architecture)
+- [Installation](#installation--running-the-application)
+- [Configuration](#environment-configuration)
+- [Running the Application](#quick-start)
+- [User Roles](#user--administrator-credentials)
+- [Role Permissions](#role-permissions)
+- [Screenshots](#screenshots)
+- [Repository Structure](#repository-structure)
+- [Test Coverage](#feature-wise-test-coverage)
+- [Contributing](#my-ai-usage)
+- [License](#license)
+
+---
 
 ## Quick Start
 
