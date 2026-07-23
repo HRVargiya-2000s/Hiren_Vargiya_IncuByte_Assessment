@@ -4,6 +4,7 @@ import Button from "./Button";
 
 export default function Navbar({ onLogout }) {
   const user = JSON.parse(localStorage.getItem("user") || "{}");
+  const isAdmin = user.role === "admin";
   const linkClass = ({ isActive }) =>
     `relative px-4 py-3 text-base font-semibold outline-none transition after:absolute after:inset-x-4 after:bottom-1 after:h-0.5 after:transition focus-visible:ring-2 focus-visible:ring-cyan-500 ${
       isActive
@@ -18,7 +19,7 @@ export default function Navbar({ onLogout }) {
           <div>
             <p className="text-xl font-bold text-slate-950">Car Inventory</p>
             <p className="text-xs font-medium uppercase tracking-wide text-cyan-700">
-              Dealership Admin
+              {isAdmin ? "Dealership Admin" : "Dealership Client"}
             </p>
           </div>
           <div className="border-l border-slate-200 bg-slate-50 px-3 py-1 text-right lg:hidden">
@@ -28,18 +29,27 @@ export default function Navbar({ onLogout }) {
         </div>
 
         <nav className="flex flex-wrap items-center gap-1 border-y border-slate-200 bg-white lg:border-y-0">
-          <NavLink className={linkClass} to="/dashboard">
-            Dashboard
-          </NavLink>
+          {isAdmin && (
+            <NavLink className={linkClass} to="/dashboard">
+              Dashboard
+            </NavLink>
+          )}
           <NavLink className={linkClass} to="/catalog">
-            User View
+            {isAdmin ? "User View" : "Catalog"}
           </NavLink>
-          <NavLink className={linkClass} to="/vehicles">
-            Vehicles
-          </NavLink>
-          <NavLink className={linkClass} to="/vehicles/new">
-            Add Vehicle
-          </NavLink>
+          {isAdmin && (
+            <>
+              <NavLink className={linkClass} to="/vehicles">
+                Vehicles
+              </NavLink>
+              <NavLink className={linkClass} to="/vehicles/new">
+                Add Vehicle
+              </NavLink>
+              <NavLink className={linkClass} to="/users">
+                Users
+              </NavLink>
+            </>
+          )}
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">

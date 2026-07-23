@@ -1,10 +1,14 @@
 import { Router } from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import authenticate from "../middleware/auth.middleware.js";
+import authorizeAdmin from "../middleware/admin.middleware.js";
 
 import {
   createUser,
   findUserByEmail,
+  getAllUsers,
+  updateUserRole,
 } from "../services/auth.service.js";
 
 const router = Router();
@@ -121,6 +125,46 @@ router.post("/login", async (req, res) => {
     return res.status(500).json({
       message: "Internal Server Error",
     });
+  }
+});
+
+/* ===========================
+   GET ALL USERS (ADMIN ONLY)
+=========================== */
+router.get("/users", authenticate, authorizeAdmin, async (req, res) => {
+  try {
+    const users = await getAllUsers();
+    return res.json(users);
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: "Internal Server Error" });
+  }
+});
+
+/* ===========================
+   UPDATE USER ROLE (ADMIN ONLY)
+=========================== */
+router.put("/users/:id/role", authenticate, authorizeAdmin, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { role } = req.body;
+
+    if (!role || (role !== "admin" && role !== "user")) {
+      return res.status(400).json({ message: "Invalid role. Must be 'admin' or 'user'" });
+    }
+
+    const updatedUser = await updateUserRole(id, role);
+    if (!updatedUser) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    return res.json({
+      message: "User role updated successfully",
+      user: updatedUser,
+    });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: "Internal Server Error" });
   }
 });
 
