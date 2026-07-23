@@ -13,6 +13,7 @@ export default function VehicleTable({
   onRestock,
   onEdit,
   onDelete,
+  actionLoading = "",
 }) {
   if (!vehicles.length) {
     return (
@@ -60,17 +61,17 @@ export default function VehicleTable({
               <td className="px-4 py-3">{currency.format(Number(vehicle.price || 0))}</td>
               <td className="px-4 py-3">{vehicle.quantity}</td>
               <td className="flex flex-wrap gap-2 px-4 py-3">
-                <Button aria-label={`Purchase ${vehicle.make} ${vehicle.model}`} disabled={Number(vehicle.quantity) === 0} onClick={() => onPurchase?.(vehicle)}>
-                  Purchase
+                <Button aria-label={`Purchase ${vehicle.make} ${vehicle.model}`} disabled={Number(vehicle.quantity) === 0 || actionLoading === `purchase-${vehicle.id}`} onClick={() => onPurchase?.(vehicle)}>
+                  {actionLoading === `purchase-${vehicle.id}` ? "Purchasing..." : "Purchase"}
                 </Button>
-                <Button aria-label={`Restock ${vehicle.make} ${vehicle.model}`} onClick={() => onRestock?.(vehicle)} variant="secondary">
-                  Restock
+                <Button aria-label={`Restock ${vehicle.make} ${vehicle.model}`} disabled={actionLoading === `restock-${vehicle.id}`} onClick={() => onRestock?.(vehicle)} variant="secondary">
+                  {actionLoading === `restock-${vehicle.id}` ? "Restocking..." : "Restock"}
                 </Button>
                 <Button aria-label={`Edit ${vehicle.make} ${vehicle.model}`} onClick={() => onEdit?.(vehicle)} variant="secondary">
                   Edit
                 </Button>
-                <Button aria-label={`Delete ${vehicle.make} ${vehicle.model}`} onClick={() => onDelete?.(vehicle)} variant="danger">
-                  Delete
+                <Button aria-label={`Delete ${vehicle.make} ${vehicle.model}`} disabled={actionLoading === `delete-${vehicle.id}`} onClick={() => onDelete?.(vehicle)} variant="danger">
+                  {actionLoading === `delete-${vehicle.id}` ? "Deleting..." : "Delete"}
                 </Button>
               </td>
             </tr>

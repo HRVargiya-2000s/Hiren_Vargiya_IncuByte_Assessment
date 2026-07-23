@@ -31,12 +31,15 @@ describe("Manage Vehicles", () => {
     });
 
     await user.click(screen.getByRole("button", { name: /purchase toyota camry/i }));
+    expect(await screen.findByText(/vehicle purchased/i)).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: /restock toyota camry/i }));
     await user.clear(screen.getByLabelText(/restock quantity/i));
     await user.type(screen.getByLabelText(/restock quantity/i), "5");
     await user.click(screen.getByRole("button", { name: /^restock$/i }));
+    expect(await screen.findByText(/vehicle restocked/i)).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: /delete toyota camry/i }));
     await user.click(screen.getByRole("button", { name: /confirm delete/i }));
+    expect(await screen.findByText(/vehicle deleted/i)).toBeInTheDocument();
 
     expect(vehicleService.purchaseVehicle).toHaveBeenCalledWith(1);
     expect(vehicleService.restockVehicle).toHaveBeenCalledWith(1, 5);
