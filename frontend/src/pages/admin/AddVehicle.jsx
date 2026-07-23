@@ -8,8 +8,11 @@ import { saveVehicleImage } from "../../utils/vehicleImages";
 export default function AddVehicle() {
   const navigate = useNavigate();
   const [error, setError] = useState("");
+  const [saving, setSaving] = useState(false);
 
   async function handleSubmit(vehicle) {
+    setSaving(true);
+    setError("");
     try {
       const { imageUrl, ...apiVehicle } = vehicle;
       const createdVehicle = await addVehicle(apiVehicle);
@@ -17,6 +20,8 @@ export default function AddVehicle() {
       navigate("/vehicles");
     } catch (err) {
       setError(err.response?.data?.message || "Unable to add vehicle");
+    } finally {
+      setSaving(false);
     }
   }
 
@@ -24,7 +29,7 @@ export default function AddVehicle() {
     <main className="space-y-4 px-4 py-6 sm:px-6">
       <h1 className="text-2xl font-semibold text-slate-900">Add Vehicle</h1>
       {error && <p className="rounded-md bg-red-50 px-3 py-2 text-sm text-red-700">{error}</p>}
-      <VehicleForm onSubmit={handleSubmit} />
+      <VehicleForm loading={saving} onSubmit={handleSubmit} />
     </main>
   );
 }

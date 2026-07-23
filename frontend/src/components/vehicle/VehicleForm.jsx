@@ -13,7 +13,7 @@ const emptyVehicle = {
   imageUrl: "",
 };
 
-export default function VehicleForm({ initialVehicle, onSubmit }) {
+export default function VehicleForm({ initialVehicle, onSubmit, loading = false }) {
   const [vehicle, setVehicle] = useState(initialVehicle || emptyVehicle);
   const [error, setError] = useState("");
 
@@ -25,19 +25,34 @@ export default function VehicleForm({ initialVehicle, onSubmit }) {
     event.preventDefault();
     setError("");
 
-    if (!vehicle.make || !vehicle.model || !vehicle.category || !vehicle.price || vehicle.quantity === "") {
+    if (!vehicle.make.trim() || !vehicle.model.trim() || !vehicle.category.trim() || !vehicle.price || vehicle.quantity === "") {
       setError("Make, model, category, price and quantity are required");
       return;
     }
 
+    if (vehicle.year && Number(vehicle.year) < 1886) {
+      setError("Year must be 1886 or later");
+      return;
+    }
+
+    if (Number(vehicle.price) <= 0) {
+      setError("Price must be greater than 0");
+      return;
+    }
+
+    if (!Number.isInteger(Number(vehicle.quantity)) || Number(vehicle.quantity) < 0) {
+      setError("Quantity must be a whole number of 0 or more");
+      return;
+    }
+
     onSubmit({
-      make: vehicle.make,
-      model: vehicle.model,
-      category: vehicle.category,
-      year: Number(vehicle.year),
+      make: vehicle.make.trim(),
+      model: vehicle.model.trim(),
+      category: vehicle.category.trim(),
+      year: vehicle.year ? Number(vehicle.year) : new Date().getFullYear(),
       price: Number(vehicle.price),
       quantity: Number(vehicle.quantity),
-      imageUrl: vehicle.imageUrl || "",
+      imageUrl: vehicle.imageUrl?.trim() || "",
     });
   }
 
@@ -54,11 +69,11 @@ export default function VehicleForm({ initialVehicle, onSubmit }) {
       <Input id="make" label="Make" value={vehicle.make} onChange={(event) => updateField("make", event.target.value)} />
       <Input id="model" label="Model" value={vehicle.model} onChange={(event) => updateField("model", event.target.value)} />
       <Input id="category" label="Category" value={vehicle.category} onChange={(event) => updateField("category", event.target.value)} />
-      <Input id="year" label="Year" type="number" value={vehicle.year} onChange={(event) => updateField("year", event.target.value)} />
-      <Input id="price" label="Price" type="number" value={vehicle.price} onChange={(event) => updateField("price", event.target.value)} />
-      <Input id="quantity" label="Quantity" type="number" value={vehicle.quantity} onChange={(event) => updateField("quantity", event.target.value)} />
+      <Input id="year" label="Year" min="1886" type="number" value={vehicle.year} onChange={(event) => updateField("year", event.target.value)} />
+      <Input id="price" label="Price" min="1" type="number" value={vehicle.price} onChange={(event) => updateField("price", event.target.value)} />
+      <Input id="quantity" label="Quantity" min="0" step="1" type="number" value={vehicle.quantity} onChange={(event) => updateField("quantity", event.target.value)} />
       <Input id="imageUrl" label="Car image URL" placeholder="https://example.com/car.jpg" value={vehicle.imageUrl || ""} onChange={(event) => updateField("imageUrl", event.target.value)} />
-      <Button type="submit">Save Vehicle</Button>
+      <Button disabled={loading} type="submit">{loading ? "Saving..." : "Save Vehicle"}</Button>
     </form>
   );
 }

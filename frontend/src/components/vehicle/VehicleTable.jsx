@@ -59,7 +59,17 @@ export default function VehicleTable({
               <td className="px-4 py-3">{vehicle.category}</td>
               <td className="px-4 py-3">{vehicle.year}</td>
               <td className="px-4 py-3">{currency.format(Number(vehicle.price || 0))}</td>
-              <td className="px-4 py-3">{vehicle.quantity}</td>
+              <td className="px-4 py-3">
+                <span className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
+                  Number(vehicle.quantity) === 0
+                    ? "bg-red-50 text-red-700"
+                    : Number(vehicle.quantity) <= 2
+                      ? "bg-amber-50 text-amber-700"
+                      : "bg-emerald-50 text-emerald-700"
+                }`}>
+                  {Number(vehicle.quantity) === 0 ? "Out of stock" : `${vehicle.quantity} in stock`}
+                </span>
+              </td>
               <td className="flex flex-wrap gap-2 px-4 py-3">
                 <Button aria-label={`Purchase ${vehicle.make} ${vehicle.model}`} disabled={Number(vehicle.quantity) === 0 || actionLoading === `purchase-${vehicle.id}`} onClick={() => onPurchase?.(vehicle)}>
                   {actionLoading === `purchase-${vehicle.id}` ? "Purchasing..." : "Purchase"}

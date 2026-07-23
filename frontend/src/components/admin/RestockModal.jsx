@@ -12,9 +12,11 @@ export default function RestockModal({ vehicle, onCancel, onConfirm }) {
   return (
     <Modal title="Restock vehicle" onClose={onCancel}>
       <div className="space-y-4">
-        <p className="text-sm text-slate-600">
-          Add stock for {vehicle.make} {vehicle.model}.
-        </p>
+        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 text-sm text-slate-700">
+          <p className="font-semibold text-slate-900">{vehicle.make} {vehicle.model}</p>
+          <p className="mt-1">Current stock: {vehicle.quantity}</p>
+          <p>New stock: {Number(vehicle.quantity || 0) + Number(quantity || 0)}</p>
+        </div>
         <Input
           id="restockQuantity"
           label="Restock quantity"
@@ -25,7 +27,7 @@ export default function RestockModal({ vehicle, onCancel, onConfirm }) {
         />
         <div className="flex justify-end gap-2">
           <Button onClick={onCancel} type="button" variant="secondary">Cancel</Button>
-          <Button onClick={() => onConfirm(Number(quantity))} type="button">Restock</Button>
+          <Button disabled={!Number.isInteger(Number(quantity)) || Number(quantity) <= 0} onClick={() => onConfirm(Number(quantity))} type="button">Restock</Button>
         </div>
       </div>
     </Modal>

@@ -26,7 +26,12 @@ describe("Dashboard", () => {
 
     expect(screen.getByLabelText(/total vehicles value/i)).toHaveTextContent("2");
     expect(screen.getByLabelText(/total stock value/i)).toHaveTextContent("5");
+    expect(screen.getByLabelText(/available stock value/i)).toHaveTextContent("5");
+    expect(screen.getByLabelText(/out of stock value/i)).toHaveTextContent("0");
+    expect(screen.getByLabelText(/low stock value/i)).toHaveTextContent("1");
     expect(screen.getByLabelText(/inventory value value/i)).toHaveTextContent("$56,000");
+    expect(screen.getByText(/quick actions/i)).toBeInTheDocument();
+    expect(screen.getByText(/recent activity/i)).toBeInTheDocument();
     expect(screen.getByText("Toyota")).toBeInTheDocument();
   });
 });

@@ -13,6 +13,7 @@ export default function EditVehicle() {
   const id = useMemo(() => params.id || location.pathname.match(/vehicles\/(\d+)\/edit/)?.[1], [params.id, location.pathname]);
   const [vehicle, setVehicle] = useState(null);
   const [error, setError] = useState("");
+  const [saving, setSaving] = useState(false);
 
   useEffect(() => {
     async function loadVehicle() {
@@ -29,6 +30,8 @@ export default function EditVehicle() {
   }, [id]);
 
   async function handleSubmit(payload) {
+    setSaving(true);
+    setError("");
     try {
       const { imageUrl, ...apiVehicle } = payload;
       await updateVehicle(id, apiVehicle);
@@ -36,6 +39,8 @@ export default function EditVehicle() {
       navigate("/vehicles");
     } catch (err) {
       setError(err.response?.data?.message || "Unable to update vehicle");
+    } finally {
+      setSaving(false);
     }
   }
 
@@ -45,7 +50,7 @@ export default function EditVehicle() {
   return (
     <main className="space-y-4 px-4 py-6 sm:px-6">
       <h1 className="text-2xl font-semibold text-slate-900">Edit Vehicle</h1>
-      <VehicleForm initialVehicle={vehicle} onSubmit={handleSubmit} />
+      <VehicleForm initialVehicle={vehicle} loading={saving} onSubmit={handleSubmit} />
     </main>
   );
 }
