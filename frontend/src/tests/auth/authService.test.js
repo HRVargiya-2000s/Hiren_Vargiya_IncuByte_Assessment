@@ -8,7 +8,7 @@ describe("Auth Service", () => {
   it("logs in successfully", async () => {
     const mock = new MockAdapter(api);
 
-    mock.onPost("/auth/login").reply(200, {
+    mock.onPost("/api/auth/login").reply(200, {
       token: "fake-jwt-token",
       user: {
         id: 1,
