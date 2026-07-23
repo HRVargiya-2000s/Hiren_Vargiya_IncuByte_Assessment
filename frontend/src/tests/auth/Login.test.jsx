@@ -1,13 +1,18 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, it, expect, vi } from "vitest";
+import { MemoryRouter } from "react-router-dom";
 
 import Login from "../../pages/auth/Login";
 import * as authService from "../../services/authService";
 
 describe("Login Page", () => {
   it("renders Login heading", () => {
-    render(<Login />);
+    render(
+      <MemoryRouter>
+        <Login />
+      </MemoryRouter>
+    );
 
     expect(
       screen.getByRole("heading", { name: /login/i })
@@ -15,7 +20,11 @@ describe("Login Page", () => {
   });
 
   it("renders Email input", () => {
-    render(<Login />);
+    render(
+      <MemoryRouter>
+        <Login />
+      </MemoryRouter>
+    );
 
     expect(
       screen.getByLabelText(/email/i)
@@ -23,7 +32,11 @@ describe("Login Page", () => {
   });
 
   it("renders Password input", () => {
-    render(<Login />);
+    render(
+      <MemoryRouter>
+        <Login />
+      </MemoryRouter>
+    );
 
     expect(
       screen.getByLabelText(/password/i)
@@ -31,7 +44,11 @@ describe("Login Page", () => {
   });
 
   it("renders Login button", () => {
-    render(<Login />);
+    render(
+      <MemoryRouter>
+        <Login />
+      </MemoryRouter>
+    );
 
     expect(
       screen.getByRole("button", { name: /login/i })
@@ -41,7 +58,11 @@ describe("Login Page", () => {
   it("updates email input when user types", async () => {
     const user = userEvent.setup();
 
-    render(<Login />);
+    render(
+      <MemoryRouter>
+        <Login />
+      </MemoryRouter>
+    );
 
     const emailInput = screen.getByLabelText(/email/i);
 
@@ -53,7 +74,11 @@ describe("Login Page", () => {
   it("updates password input when user types", async () => {
     const user = userEvent.setup();
 
-    render(<Login />);
+    render(
+      <MemoryRouter>
+        <Login />
+      </MemoryRouter>
+    );
 
     const passwordInput = screen.getByLabelText(/password/i);
 
@@ -75,7 +100,11 @@ describe("Login Page", () => {
         },
       });
 
-    render(<Login />);
+    render(
+      <MemoryRouter>
+        <Login />
+      </MemoryRouter>
+    );
 
     await user.type(
       screen.getByLabelText(/email/i),
