@@ -1,9 +1,10 @@
 import api from "../api/axios";
+import { filterSampleVehicles, sampleVehicles } from "../utils/sampleVehicles";
 
 export async function getAllVehicles() {
   const response = await api.get("/api/vehicles");
 
-  return response.data;
+  return response.data.length ? response.data : sampleVehicles;
 }
 
 export async function addVehicle(vehicle) {
@@ -43,5 +44,5 @@ export async function searchVehicle(query) {
     `/api/vehicles/search?q=${encodeURIComponent(query)}`
   );
 
-  return response.data;
+  return response.data.length ? response.data : filterSampleVehicles(query);
 }

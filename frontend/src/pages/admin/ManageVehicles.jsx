@@ -79,9 +79,9 @@ export default function ManageVehicles() {
     .filter((vehicle) => !categoryFilter || vehicle.category === categoryFilter)
     .filter((vehicle) => {
       if (!priceFilter) return true;
-      if (priceFilter === "under-10000") return Number(vehicle.price) < 10000;
-      if (priceFilter === "10000-20000") return Number(vehicle.price) >= 10000 && Number(vehicle.price) <= 20000;
-      return Number(vehicle.price) > 20000;
+      if (priceFilter === "under-1000000") return Number(vehicle.price) < 1000000;
+      if (priceFilter === "1000000-2000000") return Number(vehicle.price) >= 1000000 && Number(vehicle.price) <= 2000000;
+      return Number(vehicle.price) > 2000000;
     })
     .sort((a, b) => {
       if (sortBy === "price-desc") return Number(b.price) - Number(a.price);
@@ -177,9 +177,9 @@ export default function ManageVehicles() {
           Filter by price
           <select className="min-h-10 rounded-md border border-slate-300 bg-white px-3 py-2" id="price-filter" value={priceFilter} onChange={(event) => setPriceFilter(event.target.value)}>
             <option value="">All prices</option>
-            <option value="under-10000">Under $10k</option>
-            <option value="10000-20000">$10k - $20k</option>
-            <option value="over-20000">Over $20k</option>
+            <option value="under-1000000">Under Rs. 10 lakh</option>
+            <option value="1000000-2000000">Rs. 10-20 lakh</option>
+            <option value="over-2000000">Over Rs. 20 lakh</option>
           </select>
         </label>
         <label className="grid gap-1 text-sm font-medium text-slate-700" htmlFor="sort-inventory">

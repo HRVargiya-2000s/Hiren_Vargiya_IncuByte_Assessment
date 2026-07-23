@@ -36,7 +36,7 @@ export default function Dashboard() {
       <div className="grid gap-5 lg:grid-cols-[1.6fr_1fr]">
         <section className="space-y-3">
           <h2 className="text-lg font-semibold text-slate-900">Recent Inventory</h2>
-          <VehicleTable vehicles={vehicles.slice(0, 5)} />
+          <VehicleTable compact vehicles={vehicles.slice(0, 5)} />
         </section>
         <div className="space-y-5">
           <Card className="p-5">

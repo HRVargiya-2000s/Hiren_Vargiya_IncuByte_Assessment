@@ -30,10 +30,12 @@ describe("Manage Vehicles", () => {
       expect(vehicleService.searchVehicle).toHaveBeenCalledWith("Camry");
     });
 
+    await user.click(screen.getAllByText("Actions")[1]);
     await user.click(screen.getByRole("button", { name: /purchase toyota camry/i }));
     expect(screen.getByRole("heading", { name: /confirm purchase/i })).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: /^confirm purchase$/i }));
     expect(await screen.findByText(/vehicle purchased/i)).toBeInTheDocument();
+    await user.click(screen.getAllByText("Actions")[1]);
     await user.click(screen.getByRole("button", { name: /restock toyota camry/i }));
     expect(screen.getByText(/current stock: 1/i)).toBeInTheDocument();
     expect(screen.getByText(/new stock: 2/i)).toBeInTheDocument();
@@ -41,6 +43,7 @@ describe("Manage Vehicles", () => {
     await user.type(screen.getByLabelText(/restock quantity/i), "5");
     await user.click(screen.getByRole("button", { name: /^restock$/i }));
     expect(await screen.findByText(/vehicle restocked/i)).toBeInTheDocument();
+    await user.click(screen.getAllByText("Actions")[1]);
     await user.click(screen.getByRole("button", { name: /delete toyota camry/i }));
     await user.click(screen.getByRole("button", { name: /confirm delete/i }));
     expect(await screen.findByText(/vehicle deleted/i)).toBeInTheDocument();

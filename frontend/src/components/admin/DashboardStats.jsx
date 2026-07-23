@@ -1,8 +1,4 @@
-const currency = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD",
-  maximumFractionDigits: 0,
-});
+import { formatCurrency } from "../../utils/currency";
 
 export default function DashboardStats({ vehicles }) {
   const totalStock = vehicles.reduce((sum, vehicle) => sum + Number(vehicle.quantity || 0), 0);
@@ -22,7 +18,7 @@ export default function DashboardStats({ vehicles }) {
     ["Available Stock", totalStock],
     ["Out of Stock", outOfStock],
     ["Low Stock", lowStock],
-    ["Inventory Value", currency.format(inventoryValue)],
+    ["Inventory Value", formatCurrency(inventoryValue)],
   ];
 
   return (

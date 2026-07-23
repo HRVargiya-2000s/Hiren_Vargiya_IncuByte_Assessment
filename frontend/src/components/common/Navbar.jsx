@@ -31,6 +31,9 @@ export default function Navbar({ onLogout }) {
           <NavLink className={linkClass} to="/dashboard">
             Dashboard
           </NavLink>
+          <NavLink className={linkClass} to="/catalog">
+            User View
+          </NavLink>
           <NavLink className={linkClass} to="/vehicles">
             Vehicles
           </NavLink>

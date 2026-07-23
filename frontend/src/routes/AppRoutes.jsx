@@ -6,6 +6,7 @@ import AddVehicle from "../pages/admin/AddVehicle";
 import Dashboard from "../pages/admin/Dashboard";
 import EditVehicle from "../pages/admin/EditVehicle";
 import ManageVehicles from "../pages/admin/ManageVehicles";
+import Home from "../pages/user/Home";
 import NotFound from "../pages/NotFound";
 import ProtectedRoute from "../components/common/ProtectedRoute";
 import AdminLayout from "../layouts/AdminLayout";
@@ -27,6 +28,7 @@ export default function AppRoutes() {
           }
         >
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/catalog" element={<Home />} />
           <Route path="/vehicles" element={<ManageVehicles />} />
           <Route path="/vehicles/new" element={<AddVehicle />} />
           <Route path="/vehicles/:id/edit" element={<EditVehicle />} />

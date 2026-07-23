@@ -30,9 +30,13 @@ describe("VehicleTable", () => {
     expect(screen.getByText("Toyota")).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /purchase ford focus/i })).toBeDisabled();
 
+    await user.click(screen.getAllByText("Actions")[0]);
     await user.click(screen.getByRole("button", { name: /purchase toyota camry/i }));
+    await user.click(screen.getAllByText("Actions")[0]);
     await user.click(screen.getByRole("button", { name: /restock toyota camry/i }));
+    await user.click(screen.getAllByText("Actions")[0]);
     await user.click(screen.getByRole("button", { name: /edit toyota camry/i }));
+    await user.click(screen.getAllByText("Actions")[0]);
     await user.click(screen.getByRole("button", { name: /delete toyota camry/i }));
 
     expect(onPurchase).toHaveBeenCalledWith(vehicles[0]);
