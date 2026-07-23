@@ -1,0 +1,1020 @@
+﻿TAP version 13
+1..2
+not ok 1 - src/tests/user/UserHome.test.jsx # time=4444.36ms {
+    1..1
+    not ok 1 - User Home # time=4434.23ms {
+        1..3
+        not ok 1 - renders premium inventory sections with filters, sorting and pagination # time=638.39ms
+            ---
+            error:
+                name: "TestingLibraryElementError"
+                message: "Found multiple elements with the text: /loading vehicles/i
+
+Here are the matching elements:
+
+Ignored nodes: comments, script, style
+[36m<p[39m
+  [33mclass[39m=[32m\"mb-4 text-sm font-medium text-slate-600\"[39m
+[36m>[39m
+  [0mLoading vehicles...[0m
+[36m</p>[39m
+
+Ignored nodes: comments, script, style
+[36m<p[39m
+  [33mclass[39m=[32m\"mb-4 text-sm font-medium text-slate-600\"[39m
+[36m>[39m
+  [0mLoading vehicles...[0m
+[36m</p>[39m
+
+(If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m\"min-h-screen bg-slate-50 font-sans text-slate-800 antialiased\"[39m
+    [36m>[39m
+      [36m<section[39m
+        [33mclass[39m=[32m\"relative h-[95vh] w-full overflow-hidden bg-slate-950 text-white\"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m\"absolute inset-0 bg-cover bg-center transition-all duration-1000\"[39m
+          [33mstyle[39m=[32m\"background-image: url(\\"https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1920&q=90\\");\"[39m
+        [36m/>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m\"absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-slate-900/40\"[39m
+        [36m/>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m\"relative mx-auto flex h-full max-w-7xl flex-col justify-between px-4 py-12 sm:px-6 lg:px-8\"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m\"my-auto max-w-2xl space-y-6 pt-12\"[39m
+          [36m>[39m
+            [36m<span[39m
+              [33mclass[39m=[32m\"inline-flex items-center gap-1.5 rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-semibold tracking-wider text-cyan-400 uppercase\"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33maria-hidden[39m=[32m\"true\"[39m
+                [33mclass[39m=[32m\"lucide lucide-sparkles h-3.5 w-3.5\"[39m
+                [33mfill[39m=[32m\"none\"[39m
+                [33mheight[39m=[32m\"24\"[39m
+                [33mstroke[39m=[32m\"currentColor\"[39m
+                [33mstroke-linecap[39m=[32m\"round\"[39m
+                [33mstroke-linejoin[39m=[32m\"round\"[39m
+                [33mstroke-width[39m=[32m\"2\"[39m
+                [33mviewBox[39m=[32m\"0 0 24 24\"[39m
+                [33mwidth[39m=[32m\"24\"[39m
+                [33mxmlns[39m=[32m\"http://www.w3.org/2000/svg\"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m\"M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z\"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m\"M20 2v4\"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m\"M22 4h-4\"[39m
+                [36m/>[39m
+                [36m<circle[39m
+                  [33mcx[39m=[32m\"4\"[39m
+                  [33mcy[39m=[32m\"20\"[39m
+                  [33mr[39m=[32m\"2\"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+              [0m Electrifying Luxury[0m
+            [36m</span>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m\"text-5xl font-extrabold tracking-tight sm:text-7xl leading-none text-white\"[39m
+            [36m>[39m
+              [0mFinding your next car [0m
+              [36m<br />[39m
+              [36m<span[39m
+                [33mclass[39m=[32m\"text-cyan-400 font-light\"[39m
+              [36m>[39m
+                [0mstarts here[0m
+              [36m</span>[39m
+            [36m</h1>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m\"max-w-md text-base text-slate-300 sm:text-lg leading-relaxed\"[39m
+            [36m>[39m
+              [0mExperience the pinnacle of engineering. Meet the next generation of verified performance cars with real-time stock availability.[0m
+            [36m</p>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m\"flex flex-wrap gap-4 pt-2\"[39m
+            [36m>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m\"inline-flex min-h-12 items-center justify-center rounded-lg bg-cyan-500 px-6 text-sm font-bold text-slate-950 transition duration-300 hover:scale-105 hover:bg-cyan-400 shadow-lg shadow-cyan-500/25\"[39m
+                [33mhref[39m=[32m\"#browse\"[39m
+              [36m>[39m
+                [0mBrowse Cars[0m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m\"inline-flex min-h-12 items-center justify-center rounded-lg border border-white/30 bg-white/10 px-6 text-sm font-bold text-white backdrop-blur transition duration-300 hover:bg-white/20\"[39m
+                [33mhref[39m=[32m\"#three-showcase-section\"[39m
+              [36m>[39m
+                [0mExplore 3D Config[0m
+              [36m</a>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m\"flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between border-t border-white/10 pt-8\"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m\"flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-3.5 backdrop-blur-md max-w-sm\"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m\"relative flex h-14 w-20 shrink-0 overflow-hidden rounded-md bg-slate-800\"[39m
+              [36m>[39m
+                [36m<img[39m
+                  [33malt[39m=[32m\"Interior trailer screenshot\"[39m
+                  [33mclass[39m=[32m\"w-full object-cover opacity-75\"[39m
+                  [33msrc[39m=[32m\"https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&w=150&q=80\"[39m
+                [36m/>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m\"absolute inset-0 flex items-center justify-center bg-slate-950/20\"[39m
+                [36m>[39m
+                  [36m<span[39m
+                    [33mclass[39m=[32m\"flex h-7 w-7 items-center justify-center rounded-full bg-cyan-500 text-slate-950\"[39m
+                  [36m>[39m
+                    [36m<svg[39m
+                      [33maria-hidden[39m=[32m\"true\"[39m
+                      [33mclass[39m=[32m\"lucide lucide-play h-3.5 w-3.5 fill-slate-950 ml-0.5\"[39m
+                      [33mfill[39m=[32m\"none\"[39m
+                      [33mheight[39m=[32m\"24\"[39m
+                      [33mstroke[39m=[32m\"currentColor\"[39m
+                      [33mstroke-linecap[39m=[32m\"round\"[39m
+                      [33mstroke-linejoin[39m=[32m\"round\"[39m
+                      [33mstroke-width[39m=[32m\"2\"[39m
+                      [33mviewBox[39m=[32m\"0 0 24 24\"[39m
+                      [33mwidth[39m=[32m\"24\"[39m
+                      [33mxmlns[39m=[32m\"http://www.w3.org/2000/svg\"[39m
+                    [36m>[39m
+                      [36m<path[39m
+                        [33md[39m=[32m\"M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z\"[39m
+                      [36m/>[39m
+                    [36m</svg>[39m
+                  [36m</span>[39m
+     ..."
+            at: "E:/IncuByte/Hiren_Vargiya_IncuByte_Assessment/frontend/node_modules/@testing-library/dom/dist/config.js:37:19"
+            ...
+        ok 2 - shows an empty state when filters match no vehicles # time=2480.89ms
+        not ok 3 - links vehicle cards to the details page # time=1305.27ms
+            ---
+            error:
+                name: "TestingLibraryElementError"
+                message: "Found multiple elements with the role \"article\" and name `/honda city/i`
+
+Here are the matching elements:
+
+Ignored nodes: comments, script, style
+[36m<article[39m
+  [33maria-label[39m=[32m\"Honda City\"[39m
+  [33mclass[39m=[32m\"group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition duration-500 hover:-translate-y-2 hover:border-cyan-400 hover:shadow-xl\"[39m
+[36m>[39m
+  [36m<button[39m
+    [33maria-label[39m=[32m\"Add to wishlist\"[39m
+    [33mclass[39m=[32m\"absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full backdrop-blur-md shadow transition duration-300 bg-white/70 text-slate-700 hover:bg-white hover:text-rose-500\"[39m
+    [33mtype[39m=[32m\"button\"[39m
+  [36m>[39m
+    [36m<svg[39m
+      [33maria-hidden[39m=[32m\"true\"[39m
+      [33mclass[39m=[32m\"lucide lucide-heart h-4.5 w-4.5\"[39m
+      [33mfill[39m=[32m\"none\"[39m
+      [33mheight[39m=[32m\"24\"[39m
+      [33mstroke[39m=[32m\"currentColor\"[39m
+      [33mstroke-linecap[39m=[32m\"round\"[39m
+      [33mstroke-linejoin[39m=[32m\"round\"[39m
+      [33mstroke-width[39m=[32m\"2\"[39m
+      [33mviewBox[39m=[32m\"0 0 24 24\"[39m
+      [33mwidth[39m=[32m\"24\"[39m
+      [33mxmlns[39m=[32m\"http://www.w3.org/2000/svg\"[39m
+    [36m>[39m
+      [36m<path[39m
+        [33md[39m=[32m\"M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5\"[39m
+      [36m/>[39m
+    [36m</svg>[39m
+  [36m</button>[39m
+  [36m<button[39m
+    [33maria-label[39m=[32m\"Compare vehicle\"[39m
+    [33mclass[39m=[32m\"absolute top-4 left-4 z-10 flex h-9 w-9 items-center justify-center rounded-full backdrop-blur-md shadow transition duration-300 bg-white/70 text-slate-700 hover:bg-white hover:text-cyan-500\"[39m
+    [33mtype[39m=[32m\"button\"[39m
+  [36m>[39m
+    [36m<svg[39m
+      [33maria-hidden[39m=[32m\"true\"[39m
+      [33mclass[39m=[32m\"lucide lucide-git-compare h-4.5 w-4.5\"[39m
+      [33mfill[39m=[32m\"none\"[39m
+      [33mheight[39m=[32m\"24\"[39m
+      [33mstroke[39m=[32m\"currentColor\"[39m
+      [33mstroke-linecap[39m=[32m\"round\"[39m
+      [33mstroke-linejoin[39m=[32m\"round\"[39m
+      [33mstroke-width[39m=[32m\"2\"[39m
+      [33mviewBox[39m=[32m\"0 0 24 24\"[39m
+      [33mwidth[39m=[32m\"24\"[39m
+      [33mxmlns[39m=[32m\"http://www.w3.org/2000/svg\"[39m
+    [36m>[39m
+      [36m<circle[39m
+        [33mcx[39m=[32m\"18\"[39m
+        [33mcy[39m=[32m\"18\"[39m
+        [33mr[39m=[32m\"3\"[39m
+      [36m/>[39m
+      [36m<circle[39m
+        [33mcx[39m=[32m\"6\"[39m
+        [33mcy[39m=[32m\"6\"[39m
+        [33mr[39m=[32m\"3\"[39m
+      [36m/>[39m
+      [36m<path[39m
+        [33md[39m=[32m\"M13 6h3a2 2 0 0 1 2 2v7\"[39m
+      [36m/>[39m
+      [36m<path[39m
+        [33md[39m=[32m\"M11 18H8a2 2 0 0 1-2-2V9\"[39m
+      [36m/>[39m
+    [36m</svg>[39m
+  [36m</button>[39m
+  [36m<div[39m
+    [33mclass[39m=[32m\"relative h-56 overflow-hidden bg-slate-950\"[39m
+  [36m>[39m
+    [36m<img[39m
+      [33malt[39m=[32m\"Honda City\"[39m
+      [33mclass[39m=[32m\"h-full w-full object-cover transition duration-1000 ease-out group-hover:scale-108 group-hover:opacity-90\"[39m
+      [33msrc[39m=[32m\"https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80\"[39m
+    [36m/>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m\"absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100\"[39m
+    [36m/>[39m
+  [36m</div>[39m
+  [36m<div[39m
+    [33mclass[39m=[32m\"flex flex-1 flex-col justify-between p-5\"[39m
+  [36m>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m\"space-y-3\"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m\"flex items-center justify-between\"[39m
+      [36m>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m\"inline-flex items-center rounded-md bg-cyan-50 px-2.5 py-1 text-xs font-semibold text-cyan-800 ring-1 ring-inset ring-cyan-600/10\"[39m
+        [36m>[39m
+          [0mSedan[0m
+        [36m</span>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m\"text-xs font-semibold uppercase tracking-wider text-slate-500\"[39m
+        [36m>[39m
+          [0m2023[0m
+        [36m</span>[39m
+      [36m</div>[39m
+      [36m<div>[39m
+        [36m<h2[39m
+          [33mclass[39m=[32m\"text-xl font-bold text-slate-950 transition duration-300 group-hover:text-cyan-600\"[39m
+        [36m>[39m
+          [0mHonda City[0m
+        [36m</h2>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m\"flex items-center justify-between pt-2\"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m\"space-y-1\"[39m
+        [36m>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m\"text-[10px] uppercase tracking-wider text-slate-500 font-semibold flex items-center gap-1\"[39m
+          [36m>[39m
+            [36m<svg[39m
+              [33maria-hidden[39m=[32m\"true\"[39m
+              [33mclass[39m=[32m\"lucide lucide-landmark h-3 w-3\"[39m
+              [33mfill[39m=[32m\"none\"[39m
+              [33mheight[39m=[32m\"24\"[39m
+              [33mstroke[39m=[32m\"currentColor\"[39m
+              [33mstroke-linecap[39m=[32m\"round\"[39m
+              [33mstroke-linejoin[39m=[32m\"round\"[39m
+              [33mstroke-width[39m=[32m\"2\"[39m
+              [33mviewBox[39m=[32m\"0 0 24 24\"[39m
+              [33mwidth[39m=[32m\"24\"[39m
+              [33mxmlns[39m=[32m\"http://www.w3.org/2000/svg\"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33md[39m=[32m\"M10 18v-7\"[39m
+              [36m/>[39m
+              [36m<path[39m
+                [33md[39m=[32m\"M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z\"[39m
+              [36m/>[39m
+              [36m<path[39m
+                [33md[39m=[32m\"M14 18v-7\"[39m
+              [36m/>[39m
+              [36m<path[39m
+                [33md[39m=[32m\"M18 18v-7\"[39m
+              [36m/>[39m
+              [36m<path[39m
+                [33md[39m=[32m\"M3 22h18\"[39m
+              [36m/>[39m
+              [36m<path[39m
+                [33md[39m=[32m\"M6 18v-7\"[39m
+              [36m/>[39m
+            [36m</svg>[39m
+            [0m Est. EMI Starting[0m
+          [36m</span>[39m
+          [36m<p[39m
+            [33mclass[39m=[32m\"text-sm font-semibold text-slate-700\"[39m
+          [36m>[39m
+            [0mΓé╣23,850[0m
+            [0m/mo[0m
+          [36m</p>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m\"text-right\"[39m
+        [36m>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m\"inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ring-1 ring-inset bg-emerald-50 text-emerald-700 ring-emerald-600/10\"[39m
+          [36m>[39m
+            [0m5 Available[0m
+          [36m</span>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m\"mt-5 border-t border-slate-100 pt-4 flex items-center justify-between gap-3\"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m\"space-y-0.5\"[39m
+      [36m>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m\"text-[10px] uppercase font-semibold text-slate-500\"[39m
+        [36m>[39m
+          [0mFixed Price[0m
+        [36m</span>[39m
+        [36m<p[39m
+          [33mclass[39m=[32m\"text-xl font-extrabold text-slate-950\"[39m
+        [36m>[39m
+          [0mΓé╣13,25,000[0m
+        [36m</p>[39m
+      [36m</div>[39m
+      [36m<a[39m
+        [33mclass[39m=[32m\"inline-flex min-h-11 items-center justify-center rounded-lg bg-slate-950 px-5 text-sm font-bold text-white shadow transition duration-300 hover:bg-cyan-500 hover:text-slate-950 hover:shadow-lg focus:outline-none\"[39m
+        [33mdata-discover[39m=[32m\"true\"[39m
+        [33mhref[39m=[32m\"/catalog/1\"[39m
+      [36m>[39m
+        [0mView Details[0m
+      [36m</a>[39m
+    [36m</div>[39m
+  [36m</div>[39m
+[36m</article>[39m
+
+Ignored nodes: comments, script, style
+[36m<article[39m
+  [33maria-label[39m=[32m\"Honda City\"[39m
+  [33mclass[39m=[32m\"group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition duration-500 hover:-translate-y-2 hover:border-cyan-400 hover:shadow-xl\"[39m
+[36m>[39m
+  [36m<button[39m
+    [33maria-label[39m=[32m\"Add to wishlist\"[39m
+    [33mclass[39m=[32m\"absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full backdrop-blur-md shadow transition duration-300 bg-white/70 text-slate-700 hover:bg-white hover:text-rose-500\"[39m
+    [33mtype[39m=[32m\"button\"[39m
+  [36m>[39m
+    [36m<svg[39m
+      [33maria-hidden[39m=[32m\"true\"[39m
+      [33mclass[39m=[32m\"lucide lucide-heart h-4.5 w-4.5\"[39m
+      [33mfill[39m=[32m\"none\"[39m
+      [33mheight[39m=[32m\"24\"[39m
+      [33mstroke[39m=[32m\"currentColor\"[39m
+      [33mstroke-linecap[39m=[32m\"round\"[39m
+      [33mstroke-linejoin[39m=[32m\"round\"[39m
+      [33mstroke-width[39m=[32m\"2\"[39m
+      [33mviewBox[39m=[32m\"0 0 24 24\"[39m
+      [33mwidth[39m=[32m\"24\"[39m
+      [33mxmlns[39m=[32m\"http://www.w3.org/2000/svg\"[39m
+    [36m>[39m
+      [36m<path[39m
+        [33md[39m=[32m\"M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5\"[39m
+      [36m/>[39m
+    [36m</svg>[39m
+  [36m</button>[39m
+  [36m<button[39m
+    [33maria-label[39m=[32m\"Compare vehicle\"[39m
+    [33mclass[39m=[32m\"absolute top-4 left-4 z-10 flex h-9 w-9 items-center justify-center rounded-full backdrop-blur-md shadow transition duration-300 bg-white/70 text-slate-700 hover:bg-white hover:text-cyan-500\"[39m
+    [33mtype[39m=[32m\"button\"[39m
+  [36m>[39m
+    [36m<svg[39m
+      [33maria-hidden[39m=[32m\"true\"[39m
+      [33mclass[39m=[32m\"lucide lucide-git-compare h-4.5 w-4.5\"[39m
+      [33mfill[39m=[32m\"none\"[39m
+      [33mheight[39m=[32m\"24\"[39m
+      [33mstroke[39m=[32m\"currentColor\"[39m
+      [33mstroke-linecap[39m=[32m\"round\"[39m
+      [33mstroke-linejoin[39m=[32m\"round\"[39m
+      [33mstroke-width[39m=[32m\"2\"[39m
+      [33mviewBox[39m=[32m\"0 0 24 24\"[39m
+      [33mwidth[39m=[32m\"24\"[39m
+      [33mxmlns[39m=[32m\"http://www.w3.org/2000/svg\"[39m
+    [36m>[39m
+      [36m<circle[39m
+        [33mcx[39m=[32m\"18\"[39m
+        [33mcy[39m=[32m\"18\"[39m
+        [33mr[39m=[32m\"3\"[39m
+      [36m/>[39m
+      [36m<circle[39m
+        [33mcx[39m=[32m\"6\"[39m
+        [33mcy[39m=[32m\"6\"[39m
+        [33mr[39m=[32m\"3\"[39m
+      [36m/>[39m
+      [36m<path[39m
+        [33md[39m=[32m\"M13 6h3a2 2 0 0 1 2 2v7\"[39m
+      [36m/>[39m
+      [36m<path[39m
+        [33md[39m=[32m\"M11 18H8a2 2 0 0 1-2-2V9\"[39m
+      [36m/>[39m
+    [36m</svg>[39m
+  [36m</button>[39m
+  [36m<div[39m
+    [33mclass[39m=[32m\"relative h-56 overflow-hidden bg-slate-950\"[39m
+  [36m>[39m
+    [36m<img[39m
+      [33malt[39m=[32m\"Honda City\"[39m
+      [33mclass[39m=[32m\"h-full w-full object-cover transition duration-1000 ease-out group-hover:scale-108 group-hover:opacity-90\"[39m
+      [33msrc[39m=[32m\"https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80\"[39m
+    [36m/>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m\"absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100\"[39m
+    [36m/>[39m
+  [36m</div>[39m
+  [36m<div[39m
+    [33mclass[39m=[32m\"flex flex-1 flex-col justify-between p-5\"[39m
+  [36m>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m\"space-y-3\"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m\"flex items-center justify-between\"[39m
+      [36m>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m\"inline-flex items-center rounded-md bg-cyan-50 px-2.5 py-1 text-xs font-semibold text-cyan-800 ring-1 ring-inset ring-cyan-600/10\"[39m
+        [36m>[39m
+          [0mSedan[0m
+        [36m</span>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m\"text-xs font-semibold uppercase tracking-wider text-slate-500\"[39m
+        [36m>[39m
+          [0m2023[0m
+        [36m</span>[39m
+      [36m</div>[39m
+      [36m<div>[39m
+        [36m<h2[39m
+          [33mclass[39m=[32m\"text-xl font-bold text-slate-950 transition duration-300 group-hover:text-cyan-600\"[39m
+        [36m>[39m
+          [0mHonda City[0m
+        [36m</h2>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m\"flex items-center justify-between pt-2\"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m\"space-y-1\"[39m
+        [36m>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m\"text-[10px] uppercase tracking-wider text-slate-500 font-semibold flex items-center gap-1\"[39m
+          [36m>[39m
+            [36m<svg[39m
+              [33maria-hidden[39m=[32m\"true\"[39m
+              [33mclass[39m=[32m\"lucide lucide-landmark h-3 w-3\"[39m
+              [33mfill[39m=[32m\"none\"[39m
+              [33mheight[39m=[32m\"24\"[39m
+              [33mstroke[39m=[32m\"currentColor\"[39m
+              [33mstroke-linecap[39m=[32m\"round\"[39m
+              [33mstroke-linejoin[39m=[32m\"round\"[39m
+              [33mstroke-width[39m=[32m\"2\"[39m
+              [33mviewBox[39m=[32m\"0 0 24 24\"[39m
+              [33mwidth[39m=[32m\"24\"[39m
+              [33mxmlns[39m=[32m\"http://www.w3.org/2000/svg\"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33md[39m=[32m\"M10 18v-7\"[39m
+              [36m/>[39m
+              [36m<path[39m
+                [33md[39m=[32m\"M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z\"[39m
+              [36m/>[39m
+              [36m<path[39m
+                [33md[39m=[32m\"M14 18v-7\"[39m
+              [36m/>[39m
+              [36m<path[39m
+                [33md[39m=[32m\"M18 18v-7\"[39m
+              [36m/>[39m
+              [36m<path[39m
+                [33md[39m=[32m\"M3 22h18\"[39m
+              [36m/>[39m
+              [36m<path[39m
+                [33md[39m=[32m\"M6 18v-7\"[39m
+              [36m/>[39m
+            [36m</svg>[39m
+            [0m Est. EMI Starting[0m
+          [36m</span>[39m
+          [36m<p[39m
+            [33mclass[39m=[32m\"text-sm font-semibold text-slate-700\"[39m
+          [36m>[39m
+            [0mΓé╣23,850[0m
+            [0m/mo[0m
+          [36m</p>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m\"text-right\"[39m
+        [36m>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m\"inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ring-1 ring-inset bg-emerald-50 text-emerald-700 ring-emerald-600/10\"[39m
+          [36m>[39m
+            [0m5 Available[0m
+          [36m</span>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m\"mt-5 border-t border-slate-100 pt-4 flex items-center justify-between gap-3\"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m\"space-y-0.5\"[39m
+      [36m>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m\"text-[10px] uppercase font-semibold text-slate-500\"[39m
+        [36m>[39m
+          [0mFixed Price[0m
+        [36m</span>[39m
+        [36m<p[39m
+          [33mclass[39m=[32m\"text-xl font-extrabold text-slate-950\"[39m
+        [36m>[39m
+          [0mΓé╣13,25,000[0m
+        [36m</p>[39m
+      [36m</div>[39m
+      [36m<a[39m
+        [33mclass[39m=[32m\"inline-flex min-h-11 items-center justify-center rounded-lg bg-slate-950 px-5 text-sm font-bold text-white shadow transition duration-300 hover:bg-cyan-500 hover:text-slate-950 hover:shadow-lg focus:outline-none\"[39m
+        [33mdata-discover[39m=[32m\"true\"[39m
+        [33mhref[39m=[32m\"/catalog/1\"[39m
+      [36m>[39m
+        [0mView Details[0m
+      [36m</a>[39m
+    [36m</div>[39m
+  [36m</div>[39m
+[36m</article>[39m
+
+(If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m\"min-h-screen bg-slate-50 font-sans text-slate-800 antialiased\"[39m
+    [36m>[39m
+      [36m<section[39m
+        [33mclass[39m=[32m\"relative h-[95vh] w-full overflow-hidden bg-slate-950 text-white\"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m\"absolute inset-0 bg-cover bg-center transition-all duration-1000\"[39m
+          [33mstyle[39m=[32m\"background-image: url(\\"https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1920&q=90\\");\"[39m
+        [36m/>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m\"absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-slate-900/40\"[39m
+        [36m/>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m\"relative mx-auto flex h-full max-w-7xl flex-col justify-between px-4 py-12 sm:px-6 lg:px-8\"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m\"my-auto max-w-2xl space-y-6 pt-12\"[39m
+          [36m>[39m
+            [36m<span[39m
+              [33mclass[39m=[32m\"inline-flex items-center gap-1.5 rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-semibold tracking-wider text-cyan-400 uppercase\"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33maria-hidden[39m=[32m\"true\"[39m
+                [33mclass[39m=[32m\"lucide lucide-sparkles h-3.5 w-3.5\"[39m
+                [33mfill[39m=[32m\"none\"[39m
+                [33mheight[39m=[32m\"24\"[39m
+                [33mstroke[39m=[32m\"currentColor\"[39m
+                [33mstroke-linecap[39m=[32m\"round\"[39m
+                [33mstroke-linejoin[39m=[32m\"round\"[39m
+                [33mstroke-width[39m=[32m\"2\"[39m
+                [33mviewBox[39m=[32m\"0 0 24 24\"[39m
+                [33mwidth[39m=[32m\"24\"[39m
+                [33mxmlns[39m=[32m\"http://www.w3.org/2000/svg\"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m\"M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z\"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m\"M20 2v4\"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m\"M22 4h-4\"[39m
+                [36m/>[39m
+                [36m<circle[39m
+                  [33mcx[39m=[32m\"4\"[39m
+                  [33mcy[39m=[32m\"20\"[39m
+                  [33mr[39m=[32m\"2\"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+              [0m Electrifying Luxury[0m
+            [36m</span>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m\"text-5xl font-extrabold tracking-tight sm:text-7xl leading-none text-white\"[39m
+            [36m>[39m
+              [0mFinding your next car [0m
+              [36m<br />[39m
+              [36m<span[39m
+                [33mclass[39m=[32m\"text-cyan-400 font-light\"[39m
+              [36m>[39m
+                [0mstarts here[0m
+              [36m</span>[39m
+            [36m</h1>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m\"max-w-md text-base text-slate-300 sm:text-lg leading-relaxed\"[39m
+            [36m>[39m
+              [0mExperience the pinnacle of engineering. Meet the next generation of verified performance cars with real-time stock availability.[0m
+            [36m</p>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m\"flex flex-wrap gap-4 pt-2\"[39m
+            [36m>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m\"inline-flex min-h-12 items-center justify-center rounded-lg bg-cyan-500 px-6 text-sm font-bold text-slate-950 transition duration-300 hover:scale-105 hover:bg-cyan-400 shadow-lg shadow-cyan-500/25\"[39m
+                [33mhref[39m=[32m\"#browse\"[39m
+              [36m>[39m
+                [0mBrowse Cars[0m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m\"inline-flex min-h-12 items-center justify-center rounded-lg border border-white/30 bg-white/10 px-6 text-sm font-bold text-white backdrop-blur transition duration-300 hover:bg-white/20\"[39m
+                [33mhref[39m=[32m\"#three-showcase-section\"[39m
+              [36m>[39m
+                [0mExplore 3D Config[0m
+              [36m</a>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m\"flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between border-t border-white/10 pt-8\"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m\"flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-3.5 backdrop-blur-md max-w-sm\"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m\"relative flex h-14 w-20 shrink-0 overflow-hidden rounded-md bg-slate-800\"[39m
+              [36m>[39m
+                [36m<img[39m
+                  [33malt[39m=[32m\"Interior trailer screenshot\"[39m
+                  [33mclass[39m=[32m\"w-full object-cover opacity-75\"[39m
+                  [33msrc[39m=[32m\"https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&w=150&q=80\"[39m
+                [36m/>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m\"absolute inset-0 flex items-center justify-center bg-slate-950/20\"[39m
+                [36m>[39m
+                  [36m<span[39m
+                    [33mclass[39m=[32m\"flex h-7 w-7 items-center justify-center rounded-full bg-cyan-500 text-slate-950\"[39m
+                  [36m>[39m
+                    [36m<svg[39m
+                      [33maria-hidden[39m=[32m\"true\"[39m
+                      [33mclass[39m=[32m\"lucide lucide-play h-3.5 w-3.5 fill-slate-950 ml-0.5\"[39m
+                      [33mfill[39m=[32m\"none\"[39m
+                      [33mheight[39m=[32m\"24\"[39m
+                      [33mstroke[39m=[32m\"currentColor\"[39m
+                      [33mstroke-linecap[39m=[32m\"round\"[39m
+                      [33mstroke-linejoin[39m=[32m\"round\"[39m
+                      [33mstroke-width[39m=[32m\"2\"[39m
+                      [33mviewBox[39m=[32m\"0 0 24 24\"[39m
+                      [33mwidth[39m=[32m\"24\"[39m
+                      [33mxmlns[39m=[32m\"http://www.w3.org/2000/svg\"[39m
+                    [36m>[39m
+                      [36m<path[39m
+                        [33md[39m=[32m\"M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z\"[39m
+                      [36m/>[39m
+                    [36m</svg>[39m
+                  [36m</span>[39m
+     ...
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m\"min-h-screen bg-slate-50 font-sans text-slate-800 antialiased\"[39m
+    [36m>[39m
+      [36m<section[39m
+        [33mclass[39m=[32m\"relative h-[95vh] w-full overflow-hidden bg-slate-950 text-white\"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m\"absolute inset-0 bg-cover bg-center transition-all duration-1000\"[39m
+          [33mstyle[39m=[32m\"background-image: url(\\"https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1920&q=90\\");\"[39m
+        [36m/>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m\"absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-slate-900/40\"[39m
+        [36m/>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m\"relative mx-auto flex h-full max-w-7xl flex-col justify-between px-4 py-12 sm:px-6 lg:px-8\"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m\"my-auto max-w-2xl space-y-6 pt-12\"[39m
+          [36m>[39m
+            [36m<span[39m
+              [33mclass[39m=[32m\"inline-flex items-center gap-1.5 rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-semibold tracking-wider text-cyan-400 uppercase\"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33maria-hidden[39m=[32m\"true\"[39m
+                [33mclass[39m=[32m\"lucide lucide-sparkles h-3.5 w-3.5\"[39m
+                [33mfill[39m=[32m\"none\"[39m
+                [33mheight[39m=[32m\"24\"[39m
+                [33mstroke[39m=[32m\"currentColor\"[39m
+                [33mstroke-linecap[39m=[32m\"round\"[39m
+                [33mstroke-linejoin[39m=[32m\"round\"[39m
+                [33mstroke-width[39m=[32m\"2\"[39m
+                [33mviewBox[39m=[32m\"0 0 24 24\"[39m
+                [33mwidth[39m=[32m\"24\"[39m
+                [33mxmlns[39m=[32m\"http://www.w3.org/2000/svg\"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m\"M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z\"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m\"M20 2v4\"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m\"M22 4h-4\"[39m
+                [36m/>[39m
+                [36m<circle[39m
+                  [33mcx[39m=[32m\"4\"[39m
+                  [33mcy[39m=[32m\"20\"[39m
+                  [33mr[39m=[32m\"2\"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+              [0m Electrifying Luxury[0m
+            [36m</span>[39m
+            [36m<h1[39m
+              [33mclass[39m=[32m\"text-5xl font-extrabold tracking-tight sm:text-7xl leading-none text-white\"[39m
+            [36m>[39m
+              [0mFinding your next car [0m
+              [36m<br />[39m
+              [36m<span[39m
+                [33mclass[39m=[32m\"text-cyan-400 font-light\"[39m
+              [36m>[39m
+                [0mstarts here[0m
+              [36m</span>[39m
+            [36m</h1>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m\"max-w-md text-base text-slate-300 sm:text-lg leading-relaxed\"[39m
+            [36m>[39m
+              [0mExperience the pinnacle of engineering. Meet the next generation of verified performance cars with real-time stock availability.[0m
+            [36m</p>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m\"flex flex-wrap gap-4 pt-2\"[39m
+            [36m>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m\"inline-flex min-h-12 items-center justify-center rounded-lg bg-cyan-500 px-6 text-sm font-bold text-slate-950 transition duration-300 hover:scale-105 hover:bg-cyan-400 shadow-lg shadow-cyan-500/25\"[39m
+                [33mhref[39m=[32m\"#browse\"[39m
+              [36m>[39m
+                [0mBrowse Cars[0m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m\"inline-flex min-h-12 items-center justify-center rounded-lg border border-white/30 bg-white/10 px-6 text-sm font-bold text-white backdrop-blur transition duration-300 hover:bg-white/20\"[39m
+                [33mhref[39m=[32m\"#three-showcase-section\"[39m
+              [36m>[39m
+                [0mExplore 3D Config[0m
+              [36m</a>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m\"flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between border-t border-white/10 pt-8\"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m\"flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-3.5 backdrop-blur-md max-w-sm\"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m\"relative flex h-14 w-20 shrink-0 overflow-hidden rounded-md bg-slate-800\"[39m
+              [36m>[39m
+                [36m<img[39m
+                  [33malt[39m=[32m\"Interior trailer screenshot\"[39m
+                  [33mclass[39m=[32m\"w-full object-cover opacity-75\"[39m
+                  [33msrc[39m=[32m\"https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&w=150&q=80\"[39m
+                [36m/>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m\"absolute inset-0 flex items-center justify-center bg-slate-950/20\"[39m
+                [36m>[39m
+                  [36m<span[39m
+                    [33mclass[39m=[32m\"flex h-7 w-7 items-center justify-center rounded-full bg-cyan-500 text-slate-950\"[39m
+                  [36m>[39m
+                    [36m<svg[39m
+                      [33maria-hidden[39m=[32m\"true\"[39m
+                      [33mclass[39m=[32m\"lucide lucide-play h-3.5 w-3.5 fill-slate-950 ml-0.5\"[39m
+                      [33mfill[39m=[32m\"none\"[39m
+                      [33mheight[39m=[32m\"24\"[39m
+                      [33mstroke[39m=[32m\"currentColor\"[39m
+                      [33mstroke-linecap[39m=[32m\"round\"[39m
+                      [33mstroke-linejoin[39m=[32m\"round\"[39m
+                      [33mstroke-width[39m=[32m\"2\"[39m
+                      [33mviewBox[39m=[32m\"0 0 24 24\"[39m
+                      [33mwidth[39m=[32m\"24\"[39m
+                      [33mxmlns[39m=[32m\"http://www.w3.org/2000/svg\"[39m
+                    [36m>[39m
+                      [36m<path[39m
+                        [33md[39m=[32m\"M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z\"[39m
+                      [36m/>[39m
+                    [36m</svg>[39m
+                  [36m</span>[39m
+     ..."
+            at: "E:/IncuByte/Hiren_Vargiya_IncuByte_Assessment/frontend/node_modules/@testing-library/dom/dist/wait-for.js:163:27"
+            ...
+    }
+}
+not ok 2 - src/tests/user/VehicleDetails.test.jsx # time=2215.79ms {
+    1..1
+    not ok 1 - Vehicle Details # time=2208.52ms {
+        1..3
+        not ok 1 - shows vehicle details, specifications and related vehicles # time=492.65ms
+            ---
+            error:
+                name: "TestingLibraryElementError"
+                message: "Found multiple elements with the text: Sedan
+
+Here are the matching elements:
+
+Ignored nodes: comments, script, style
+[36m<span[39m
+  [33mclass[39m=[32m\"inline-flex items-center rounded-md bg-cyan-50 px-2.5 py-1 text-xs font-bold text-cyan-800 ring-1 ring-inset ring-cyan-600/10 uppercase tracking-wider\"[39m
+[36m>[39m
+  [0mSedan[0m
+[36m</span>[39m
+
+Ignored nodes: comments, script, style
+[36m<p[39m
+  [33mclass[39m=[32m\"font-semibold text-slate-900\"[39m
+[36m>[39m
+  [0mSedan[0m
+[36m</p>[39m
+
+Ignored nodes: comments, script, style
+[36m<span[39m
+  [33mclass[39m=[32m\"inline-flex items-center rounded-md bg-cyan-50 px-2.5 py-1 text-xs font-semibold text-cyan-800 ring-1 ring-inset ring-cyan-600/10\"[39m
+[36m>[39m
+  [0mSedan[0m
+[36m</span>[39m
+
+(If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m\"min-h-screen bg-slate-50 font-sans text-slate-800 antialiased\"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m\"mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8\"[39m
+      [36m>[39m
+        [36m<a[39m
+          [33mclass[39m=[32m\"inline-flex items-center gap-1.5 text-sm font-bold text-cyan-600 hover:text-cyan-800 transition\"[39m
+          [33mdata-discover[39m=[32m\"true\"[39m
+          [33mhref[39m=[32m\"/catalog\"[39m
+        [36m>[39m
+          [36m<svg[39m
+            [33maria-hidden[39m=[32m\"true\"[39m
+            [33mclass[39m=[32m\"lucide lucide-arrow-left h-4 w-4\"[39m
+            [33mfill[39m=[32m\"none\"[39m
+            [33mheight[39m=[32m\"24\"[39m
+            [33mstroke[39m=[32m\"currentColor\"[39m
+            [33mstroke-linecap[39m=[32m\"round\"[39m
+            [33mstroke-linejoin[39m=[32m\"round\"[39m
+            [33mstroke-width[39m=[32m\"2\"[39m
+            [33mviewBox[39m=[32m\"0 0 24 24\"[39m
+            [33mwidth[39m=[32m\"24\"[39m
+            [33mxmlns[39m=[32m\"http://www.w3.org/2000/svg\"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m\"m12 19-7-7 7-7\"[39m
+            [36m/>[39m
+            [36m<path[39m
+              [33md[39m=[32m\"M19 12H5\"[39m
+            [36m/>[39m
+          [36m</svg>[39m
+          [0m Back to catalog[0m
+        [36m</a>[39m
+      [36m</div>[39m
+      [36m<main[39m
+        [33mclass[39m=[32m\"mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8 space-y-12\"[39m
+      [36m>[39m
+        [36m<section[39m
+          [33mclass[39m=[32m\"grid gap-10 rounded-3xl border border-slate-200 bg-white p-6 sm:p-10 shadow-lg lg:grid-cols-[1.1fr_0.9fr]\"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m\"space-y-4\"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m\"relative overflow-hidden rounded-2xl bg-slate-950 aspect-[4/3] shadow-md border border-slate-100\"[39m
+            [36m>[39m
+              [36m<img[39m
+                [33malt[39m=[32m\"Honda City\"[39m
+                [33mclass[39m=[32m\"h-full w-full object-cover\"[39m
+                [33msrc[39m=[32m\"https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80\"[39m
+              [36m/>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m\"absolute top-4 left-4 rounded-full bg-slate-950/80 border border-white/15 px-3 py-1 text-xs font-semibold text-white uppercase tracking-wider\"[39m
+              [36m>[39m
+                [36m<span>[39m
+                  [0m2023[0m
+                [36m</span>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m\"grid grid-cols-3 gap-3\"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m\"relative aspect-[4/3] rounded-xl overflow-hidden border-2 bg-slate-100 transition cursor-pointer hover:opacity-90 border-cyan-500 shadow-md\"[39m
+                [33mtype[39m=[32m\"button\"[39m
+              [36m>[39m
+                [36m<img[39m
+                  [33malt[39m=[32m\"\"[39m
+                  [33mclass[39m=[32m\"h-full w-full object-cover\"[39m
+                  [33msrc[39m=[32m\"https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80\"[39m
+                [36m/>[39m
+              [36m</button>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m\"relative aspect-[4/3] rounded-xl overflow-hidden border-2 bg-slate-100 transition cursor-pointer hover:opacity-90 border-slate-200\"[39m
+                [33mtype[39m=[32m\"button\"[39m
+              [36m>[39m
+                [36m<img[39m
+                  [33malt[39m=[32m\"\"[39m
+                  [33mclass[39m=[32m\"h-full w-full object-cover\"[39m
+                  [33msrc[39m=[32m\"https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80\"[39m
+                [36m/>[39m
+              [36m</button>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m\"relative aspect-[4/3] rounded-xl overflow-hidden border-2 bg-slate-100 transition cursor-pointer hover:opacity-90 border-slate-200\"[39m
+                [33mtype[39m=[32m\"button\"[39m
+              [36m>[39m
+                [36m<img[39m
+                  [33malt[39m=[32m\"\"[39m
+                  [33mclass[39m=[32m\"h-full w-full object-cover\"[39m
+                  [33msrc[39m=[32m\"https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&w=800&q=80\"[39m
+                [36m/>[39m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m\"flex flex-col justify-between\"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m\"space-y-6\"[39m
+            [36m>[39m
+              [36m<div>[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m\"inline-flex items-center rounded-md bg-cyan-50 px-2.5 py-1 text-xs font-bold text-cyan-800 ring-1 ring-inset ring-cyan-600/10 uppercase tracking-wider\"[39m
+                [36m>[39m
+                  [0mSedan[0m
+                [36m</span>[39m
+                [36m<h1[39m
+                  [33mclass[39m=[32m\"mt-2 text-3xl font-bold text-slate-950\"[39m
+                [36m>[39m
+                  [0mHonda[0m
+                  [0m [0m
+                  [0mCity[0m
+                [36m</h1>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m\"mt-4 flex items-center justify-between border-b border-slate-100 pb-4\"[39m
+                [36m>[39m
+                  [36m<p[39m
+                    [33mclass[39m=[32m\"text-3xl font-semibold text-slate-950\"[39m
+                  [36m>[39m
+                    [0mΓé╣13,25,000[0m
+                  [36m</p>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m\"flex items-center gap-2\"[39m
+                  [36m>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m\"rounded-full bg-slate-100 px-3 py-1.5 text-sm font-semibold text-slate-700\"[39m
+                    [36m>[39m
+                      [0m2023[0m
+                    [36m</span>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m\"inline-flex items-center rounded-full px-3 py-1.5 text-sm font-semibold ring-1 ring-inset bg-amber-50 text-amber-700 ring-amber-600/15\"[39m
+                    [36m>[39m
+                      [0m2 in stock[0m
+                    [36m</span>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<p[39m
+          ..."
+            at: "E:/IncuByte/Hiren_Vargiya_IncuByte_Assessment/frontend/node_modules/@testing-library/dom/dist/config.js:37:19"
+            ...
+        not ok 2 - confirms purchase, updates stock, shows toast and navigates to catalog # time=1633.74ms
+            ---
+            error:
+                name: "TestingLibraryElementError"
+                message: "Unable to find an element with the text: /purchase completed/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<p>[39m
+      [0mCatalog page[0m
+    [36m</p>[39m
+  [36m</div>[39m
+[36m</body>[39m
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<p>[39m
+      [0mCatalog page[0m
+    [36m</p>[39m
+  [36m</div>[39m
+[36m</body>[39m"
+            at: "E:/IncuByte/Hiren_Vargiya_IncuByte_Assessment/frontend/node_modules/@testing-library/dom/dist/wait-for.js:163:27"
+            ...
+        ok 3 - disables purchase when stock is zero # time=81.48ms
+    }
+}
