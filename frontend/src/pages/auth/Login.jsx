@@ -1,34 +1,41 @@
 import { useState } from "react";
-
+import { loginUser } from "../../services/authService";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    await loginUser({
+      email,
+      password,
+    });
+  };
+
   return (
-    <div>
+    <form onSubmit={handleSubmit}>
       <h1>Login</h1>
 
-      <div>
-        <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </div>
+      <label htmlFor="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
 
-      <div>
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
+      <label htmlFor="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
 
-      <button type="submit">Login</button>
-    </div>
+      <button type="submit">
+        Login
+      </button>
+    </form>
   );
 }
